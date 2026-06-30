@@ -22,7 +22,7 @@ graph TD
         B <-->|Spawn Sidecar| D["FastAPI Backend<br/>Server"]
     end
 
-    subgraph "Containerized Services (Docker Compose)"
+    subgraph "Docker Infrastructure"
         C <-->|"Subprocess<br/>Control"| E["Docker Daemon"]
         E <-->|Orchestrates| F["PostgreSQL 16<br/>Alpine Database"]
         D <-->|SQLAlchemy ORM| F
