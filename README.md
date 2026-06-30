@@ -16,13 +16,13 @@ This document details the software's underlying technical architecture, focusing
 
 ```mermaid
 graph TD
-    subgraph Client Desktop Environment (Tauri App Shell)
+    subgraph "Client Desktop Environment (Tauri App Shell)"
         A[React 19 / Vite 8 Frontend] <-->|HTTP API| B[Tauri Rust Wrapper]
         B <-->|Spawn Sidecar| C[Python Docker Control Daemon]
         B <-->|Spawn Sidecar| D[FastAPI Backend Server]
     end
 
-    subgraph Containerized Services (Docker Compose)
+    subgraph "Containerized Services (Docker Compose)"
         C <-->|Subprocess Control| E[Docker Daemon]
         E <-->|Orchestrates| F[PostgreSQL 16 Alpine Container]
         D <-->|SQLAlchemy ORM| F
