@@ -23,7 +23,7 @@ graph TD
     end
 
     subgraph "Containerized Services (Docker Compose)"
-        C <-->|Subprocess Control| E["Docker Daemon"]
+        C <-->|"Subprocess<br/>Control"| E["Docker Daemon"]
         E <-->|Orchestrates| F["PostgreSQL 16<br/>Alpine Database"]
         D <-->|SQLAlchemy ORM| F
     end
