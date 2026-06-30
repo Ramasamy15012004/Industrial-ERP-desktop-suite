@@ -1,0 +1,26 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# PyInstaller / Build
+build/
+dist/
+*.spec
+
+# Node/Vite build
+front-end/node_modules/
+front-end/dist/
+
+# Rust/Tauri build artifacts
+front-end/src-tauri/target/
+
+# Local configuration & environment
+.env
+.venv
+venv/
+ENV/
+env/
+.idea/
+.vscode/
+*.local
